@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_instance" "one" {
   ami = "ami-0aa7d40eeae50c9a9"
   instance_type = "t2.micro"
-  key_name = "Jenkins"
+  key_name = "Jenkins-N"
   vpc_security_group_ids = [aws_security_group.third.id]
   availability_zone = "us-east-1a"
   user_data =<<EOF
@@ -24,7 +24,7 @@ resource "aws_instance" "one" {
 resource "aws_instance" "two" {
   ami = "ami-0aa7d40eeae50c9a9"
   instance_type = "t2.micro"
-  key_name = "Jenkins"
+  key_name = "Jenkins-N"
   availability_zone = "us-east-1b"
   vpc_security_group_ids = [aws_security_group.third.id]
   user_data =<<EOF

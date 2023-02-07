@@ -25,7 +25,7 @@ resource "aws_instance" "two" {
   ami = "ami-05bfbece1ed5beb54"
   instance_type = "t2.micro"
   key_name = "Jenkins"
-  availability_group = "us-east-1b"
+  availability_zone = "us-east-1b"
   vpc_security_group_ids = aws_security_group.third.id
   user_data =<<EOF
 #!/bin/bash

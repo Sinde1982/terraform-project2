@@ -37,6 +37,8 @@ resource "aws_instance" "two" {
   EOF
   tags = {
     Name = "server-2"
+  }
+} 
 
 resource "aws_security_group" "third" {
   Name = "eib_sg"

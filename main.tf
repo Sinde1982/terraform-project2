@@ -41,7 +41,7 @@ resource "aws_instance" "two" {
 } 
 
 resource "aws_security_group" "third" {
-  Name = "eib_sg"
+  name = "eib_sg"
   ingress {
     from_port = 22
     to_port = 22

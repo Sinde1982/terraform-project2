@@ -56,7 +56,7 @@ resource "aws_security_group" "third" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   
-  egreee {
+  egress {
     from_port = 0
     to_port = 0
     protocol = ["-1"]

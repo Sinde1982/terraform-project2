@@ -26,6 +26,7 @@ resource "aws_instance" "two" {
   instance_type = "t2.micro"
   key_name = "Jenkins"
   availability_group = "us_east-1b"
+  vpc_security_group_ids = aws_security_group.third.id
   user_data =<<EOF
 #!/bin/bash
   sudo -i
@@ -37,7 +38,7 @@ resource "aws_instance" "two" {
   tags = {
     Name = "server-2"
 
-resource "security_group" "third" {
+resource "aws_security_group" "third" {
   Name = "eib_sg"
   ingress {
     from_port = 22

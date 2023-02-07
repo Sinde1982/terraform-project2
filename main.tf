@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "one" {
-  ami = "ami-05bfbece1ed5beb54"
+  ami = "ami-0aa7d40eeae50c9a9"
   instance_type = "t2.micro"
   key_name = "Jenkins"
   vpc_security_group_ids = [aws_security_group.third.id]
@@ -22,7 +22,7 @@ resource "aws_instance" "one" {
 }
 
 resource "aws_instance" "two" {
-  ami = "ami-05bfbece1ed5beb54"
+  ami = "ami-0aa7d40eeae50c9a9"
   instance_type = "t2.micro"
   key_name = "Jenkins"
   availability_zone = "us-east-1b"

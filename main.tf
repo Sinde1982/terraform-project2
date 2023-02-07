@@ -6,7 +6,7 @@ resource "aws_instance" "one" {
   ami = "ami-05bfbece1ed5beb54"
   instance_type = "t2.micro"
   key_name = "Jenkins"
-  vpc_security_group_ids = aws_security_group.third.id
+  vpc_security_group_ids = [aws_security_group.third.id]
   availability_zone = "us-east-1a"
   user_data =<<EOF
 #!/bin/bash
@@ -26,7 +26,7 @@ resource "aws_instance" "two" {
   instance_type = "t2.micro"
   key_name = "Jenkins"
   availability_zone = "us-east-1b"
-  vpc_security_group_ids = aws_security_group.third.id
+  vpc_security_group_ids = [aws_security_group.third.id]
   user_data =<<EOF
 #!/bin/bash
   sudo -i
